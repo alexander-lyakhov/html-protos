@@ -1,0 +1,17 @@
+﻿.list-item.simple {
+  background: map.get($bg, "list-item");
+
+  &:not(last-child) {
+    margin: 0 0 2px;
+  }
+
+  a {
+    display: block;
+    padding: 0.75rem .5rem;
+
+    &:hover {
+      color: map.get($textColor, "list-item:hover");
+      background: map.get($bg, "list-item:hover");
+    }
+  }
+}

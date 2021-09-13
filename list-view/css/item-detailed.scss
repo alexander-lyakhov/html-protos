@@ -1,0 +1,36 @@
+﻿.list-item.detailed {
+  background: map.get($bg, "list-item");
+
+  &:not(last-child) {
+    margin: 0 0 2px;
+  }
+
+  a {
+    border: 2px solid transparent;
+    display: block;
+    padding: 0.25rem .5rem;
+
+    span {
+      display: block;
+      line-height: 1.75rem;
+
+      &.line1 {
+        font-size: 1.25rem;
+      }
+
+      &.line2 {
+        font-size: .75rem;
+        color: map.get($textColor, "list-item-secondary")
+      }
+    }
+
+    &:hover {
+      color: map.get($textColor, "list-item-primary:hover");
+      background: map.get($bg, "list-item:hover");
+
+      .line2 {
+        color: map.get($textColor, "list-item-secondary:hover");
+      }
+    }
+  }
+}
