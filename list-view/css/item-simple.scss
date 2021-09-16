@@ -1,5 +1,6 @@
 ﻿.list-item.simple {
-  background: map.get($list, item, bg);
+  // background: map.get($list, item, bg);
+  background: map.get($bg, "list-item");
 
   &:not(last-child) {
     margin: 0 0 2px;
@@ -10,8 +11,10 @@
     padding: 0.75rem .5rem;
 
     &:hover {
-      color: map.get($list, item, hover, fc);
-      background: map.get($list, item, hover, bg);
+      // color: map.get($list, item, hover, fc);
+      // background: map.get($list, item, hover, bg);
+      color: map.get($fc, "list-item:hover");
+      background: map.get($bg, "list-item:hover");
     }
   }
 }

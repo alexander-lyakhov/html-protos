@@ -1,5 +1,5 @@
 ﻿@use "sass:map";
-@import "theme-dark.scss";
+@import "theme-simple/dark.scss";
 @import "item-simple.scss";
 @import "item-detailed.scss";
 
@@ -24,16 +24,19 @@ html {
 
 body {
   font: 16px verdana;
-  color: map.get($theme, body, fc);
-  background: map.get($theme, body, bg);
+  // color: map.get($theme, body, fc);
+  // background: map.get($theme, body, bg);
+  color: map.get($fc, body);
+  background: map.get($bg, body);
   height: 100%;
   padding-top: 64px;
-  //position: fixed;
 }
 
 header {
-  color: map.get($header, fc);
-  background: map.get($header, bg);
+  // color: map.get($header, fc);
+  // background: map.get($header, bg);
+  color: map.get($fc, header);
+  background: map.get($bg, header);
   border-bottom: 1px solid #686868;
   box-shadow: 0 4px 8px #00000040;
   display: flex;
@@ -65,22 +68,27 @@ main {
 }
 
 .list {
-  color: map.get($list, fc);
-  background: map.get($list, bg);
+  // color: map.get($list, fc);
+  // background: map.get($list, bg);
+  color: map.get($fc, list);
+  background: map.get($bg, list);
   flex: 512px 0 1;
   margin: 0 .75rem;
 
   &-title {
     font-size: 1.25rem;
-    color: map.get($list, title, fc);
-    background: map.get($list, title, bg);
+    // color: map.get($list, title, fc);
+    // background: map.get($list, title, bg);
+    color: map.get($fc, "list-title");
+    background: map.get($bg, "list-title");
     line-height: 3rem;
     padding: 0 .5rem;
   }
 
   &-nav {
     font-size: .875rem;
-    color: map.get($list, nav, fc);
+    // color: map.get($list, nav, fc);
+    color: map.get($fc, "list-nav");
     line-height: 2.5rem;
     padding: 0 .5rem;
 
@@ -93,7 +101,8 @@ main {
         cursor: pointer;
 
         &.selected {
-          color: map.get($list, nav, selected, fc);
+          // color: map.get($list, nav, selected, fc);
+          color: map.get($fc, "list-nav-selected");
           border-bottom: 2px solid $fc-primary;
         }
 

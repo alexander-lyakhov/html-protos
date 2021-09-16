@@ -1,0 +1,29 @@
+﻿$fc-primary: #e0e0e0;
+$fc-secondary: #c0c0c0;
+
+$fc-accent: #f0c000;
+$bg-accent: #ea0;
+
+$fc: (
+  "body": $fc-primary,
+  "header": $fc-secondary,
+  "list": $fc-primary,
+  "list-title": #000,
+  "list-nav": $fc-secondary,
+  "list-nav-selected": $fc-accent,
+  "list-item": $fc-primary,
+  "list-item:hover": #000,
+  "list-item-primary": $fc-primary,
+  "list-item-primary:hover": #000,
+  "list-item-secondary": $fc-secondary,
+  "list-item-secondary:hover": #404040,
+);
+
+$bg: (
+  "body": #000,
+  "header": #404040,
+  "list": #606060,
+  "list-title": #e0e0e0,
+  "list-item": #404040,
+  "list-item:hover": $bg-accent
+);
