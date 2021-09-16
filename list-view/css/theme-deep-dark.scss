@@ -1,0 +1,64 @@
+﻿$fc-primary: #e0e0e0;
+$fc-secondary: #c0c0c0;
+
+$fc-accent: #f0c000;
+$bg-accent: #ea0;
+
+$theme: (
+  body: (
+    fc: $fc-primary,
+    bg: #000,
+  ),
+
+  header: (
+    fc: $fc-secondary,
+    bg: #404040,
+  ),
+
+  list: (
+    fc: $fc-primary,
+    bg: #606060,
+
+    title: (
+      fc: #000,
+      bg: #e0e0e0
+    ),
+
+    nav: (
+      fc: $fc-secondary,
+
+      selected: (
+        fc: $fc-accent
+      )
+    ),
+
+    item: (
+      fc: $fc-primary,
+      bg: #404040,
+
+      hover: (
+        fc: #000,
+        bg: $bg-accent
+      ),
+
+      primary: (
+        fc: $fc-primary,
+
+        hover: (
+          fc: #000,
+        )
+      ),
+
+      secondary: (
+        fc: $fc-secondary,
+
+        hover: (
+          fc: #404040,
+        )
+      )
+    ),
+  )
+);
+
+$header: map.get($theme, header);
+$list: map.get($theme, list);

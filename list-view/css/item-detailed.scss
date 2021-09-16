@@ -1,5 +1,5 @@
 ﻿.list-item.detailed {
-  background: map.get($bg, "list-item");
+  background: map.get($list, item, bg);
 
   &:not(last-child) {
     margin: 0 0 2px;
@@ -20,16 +20,16 @@
 
       &.line2 {
         font-size: .75rem;
-        color: map.get($textColor, "list-item-secondary")
+        color: map.get($list, item, secondary, fc);
       }
     }
 
     &:hover {
-      color: map.get($textColor, "list-item-primary:hover");
-      background: map.get($bg, "list-item:hover");
+      color: map.get($list, item, primary, hover, fc);
+      background: map.get($list, item, hover, bg);
 
       .line2 {
-        color: map.get($textColor, "list-item-secondary:hover");
+        color: map.get($list, item, secondary, hover, fc);
       }
     }
   }
