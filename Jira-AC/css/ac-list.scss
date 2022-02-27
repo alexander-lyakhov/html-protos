@@ -1,0 +1,118 @@
+﻿.ac-list {
+  @extend .noselect;
+  background: #e0e0e0;
+  width: 400px;
+  height: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &__header {
+    color: #fff;
+    background: #0080a0;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 .5rem;
+    cursor: pointer;
+  }
+
+  &__body {
+    padding: .5rem;
+
+    &-controls {
+      background: #0080a0;
+      //border-top: 1px solid #a0a0a0;
+      height: 32px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      //margin: 0 .5rem;
+      padding: 0 .5rem;
+
+      .btn-reset {
+        font-size: .875rem;
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &.collapsed .ac-list__body {
+    display: none;
+  }
+
+  &__item {
+    background: #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin: 2px 0;
+    padding: 0 .5rem;
+
+    &.is-done {
+      background: #f4f4f4;
+    }
+  }
+}
+
+.checkbox {
+  $w: 40px;
+  $h: 20px;
+  $hVal: 20;
+
+  background: #008080;
+  border-radius: $h / 2;
+  width: $w;
+  height: $h;
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  & input[type="checkbox"] {
+    width: 0;
+    height: 0;
+
+    &:before {
+      content: "";
+      background: linear-gradient(
+        to right,
+        #40a040 0%,
+        #40a040 50%,
+        #a0a0a0 50%,
+        #a0a0a0 100%
+      );
+      width: $w * 2;
+      height: $h;
+      position: absolute;
+      left: -100%;
+      top: 0;
+      transition: left 0.25s;
+      cursor: pointer;
+    }
+    &:after {
+      content: "";
+      background: #fff;
+      border-radius: 50%;
+      display: block;
+      width: $h - 4px;
+      height: $h - 4px;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      transition: left 0.25s;
+      cursor: pointer;
+    }
+    &:checked:before {
+      left: 0;
+    }
+    &:checked:after {
+      left: calc(100% - #{$hVal - 2}px);
+    }
+  }
+}
